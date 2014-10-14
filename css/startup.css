@@ -54,6 +54,17 @@ I will really help you
 
 */
 
+
+/*========== Rotating things ===========*/
+
+/*#explore, #nine-steps, #entry {
+    margin: 0 -50px;
+    transform-origin: left center;
+    transform: rotate(5deg);	
+}*/
+
+
+
 /*========== Tim's STYLES ==============*/
 video#bgvid {
 position: absolute; right: 0; bottom: 0;
