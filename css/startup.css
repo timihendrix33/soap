@@ -189,11 +189,12 @@ h2 {
 	margin:15px 0;
 }
 h3 {
-	font-size:20px;
+	font-size:48px;
 	margin:10px 0;
 }
 h4 {
 	font-size:20px;
+	font-weight: bold;
 	margin:10px 0;
 }
 h5 {
@@ -650,6 +651,9 @@ to {
 	padding: 50px 0;
 
 }
+.container {
+	padding: 150px 0;	
+}
 .scrollto, .scrollto:hover {
 	color: #d0112b;
 	font-size: 10px;
@@ -658,8 +662,19 @@ to {
 .scrollto--arrow img {
 	margin-top:15px;
 }
-
-
+#video {
+	color:#fff;
+	background: url(../images/dark-bg.jpg) 0 0 repeat;
+}
+.rotate-clockwise {
+	transform: rotate(5deg);
+	transform-origin:left center;
+	margin:0 -50px;
+}
+.rotate-counter-clockwise {
+	transform: rotate(-5deg);
+	transform-origin:right center;
+}
 /*==========9. CUSTOM MEDIA QUERIES==============*/
 
 
