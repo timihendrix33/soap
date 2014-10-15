@@ -117,7 +117,7 @@ button .scrollto, button .scrollto:hover {
 	-moz-box-shadow: 0 3px 0 rgba(213, 133, 18, 1);
 	box-shadow: 0 3px 0 rgba(213, 133, 18, 1);	
 }*/
-.scrollto, .scrollto:hover {margin:50px auto !important;}
+/*.scrollto, .scrollto:hover {margin:50px auto !important;}*/
 
 .nine-steps {
 	padding: 60px 15px;
@@ -190,12 +190,13 @@ h2 {
 }
 h3 {
 	font-size:48px;
-	margin:10px 0;
+	margin:0 0 35px;
 }
 h4 {
 	font-size:20px;
 	font-weight: bold;
 	margin:10px 0;
+	text-transform: uppercase;
 }
 h5 {
 	font-size:30px;
@@ -466,23 +467,6 @@ to {
 .thumbnail .caption p {
 	color: #94a3a8;
 }
-/*Hover Animation*/
-
-.thumbnail img {
-	-moz-transition:all 0.6s ease;
-	-webkit-transition:all 0.6s ease;
-	-ms-transition:all 0.6s ease;
-	-o-transition:all 0.6s ease;
-	transition:all 0.6s ease;
-}
-.thumbnail:hover img {
-	-moz-transform:scale(1.05);
-	-webkit-transform:scale(1.05);
-	-o-transform:scale(1.05);
-	-ms-transform:scale(1.05);
-	transform:scale(1.05);
-	z-index:2;
-}
 /*========== 5. TESTIMONIALS ==============*/
 
 .testblock {
@@ -651,8 +635,16 @@ to {
 	padding: 50px 0;
 
 }
-.container {
-	padding: 150px 0;	
+.rotate.clockwise .container {
+	padding: 150px 0 200px;	
+}
+.rotate.counter-clockwise .container {
+	padding: 50px 0 200px;	
+}
+.row.arrow-container {
+	position:absolute;
+	left:0;
+	right:0;
 }
 .scrollto, .scrollto:hover {
 	color: #d0112b;
@@ -662,19 +654,58 @@ to {
 .scrollto--arrow img {
 	margin-top:15px;
 }
+.rotate {
+	margin:0 -100px;
+	transform-origin:left center;	
+}
+.rotate.container {
+	margin-left:auto;
+	margin-right:auto;
+}
+.rotate.clockwise {
+	transform: rotate(5deg);
+}
+.rotate.counter-clockwise {
+	transform: rotate(-5deg);
+}
+.btn-default {
+	color:#fff;
+	background: #d0112b;
+	border: none;
+	border-bottom:2px solid #910c1e;
+	padding: 15px 30px;
+	border-radius: 5px;
+	font-weight: 500;
+	font-size: 16px;
+	text-transform: uppercase;
+	letter-spacing: .8px;
+}
+.btn-default:hover {
+	color:#fff;
+	background: #bc0f26;
+	border-bottom:2px solid #7f0a1a;
+}
 #video {
 	color:#fff;
 	background: url(../images/dark-bg.jpg) 0 0 repeat;
 }
-.rotate-clockwise {
-	transform: rotate(5deg);
-	transform-origin:left center;
-	margin:0 -50px;
+#video p {
+	color:#bbbbbb;
 }
-.rotate-counter-clockwise {
-	transform: rotate(-5deg);
-	transform-origin:right center;
+#categories {
+	background: #eeeeee;
+	text-align: center; 
 }
+#categories h3 {
+	color:#d0112b;
+}
+.thumbnail {
+	background: none;
+}
+.caption p {
+	font-size: 14px;
+}
+
 /*==========9. CUSTOM MEDIA QUERIES==============*/
 
 
