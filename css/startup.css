@@ -184,7 +184,7 @@ h1 {
 }
 h2 {
 	font-weight: bold;
-	font-size:40px;
+	font-size:60px;
 	font-weight:600;
 	margin:15px 0;
 }
@@ -193,15 +193,15 @@ h3 {
 	margin:0 0 35px;
 }
 h4 {
-	font-size:20px;
+	font-size:18px;
 	font-weight: bold;
 	margin:10px 0;
 	text-transform: uppercase;
 }
 h5 {
-	font-size:30px;
-	margin:15px 0;
-	
+	font-size:18px;
+	color:#999;
+	font-weight: 300;
 }
 h6 {
 	font-size:16px;
@@ -617,15 +617,7 @@ to {
 	-o-background-size: cover;
 	background-size: cover;
 }
-.footerlinks {
-	text-align:center;
-}
-.footerlinks h4 aa {
-	text-align:center;
-	padding:0 13px;
-	display:inline-block;
-	padding-bottom: 15px;
-}
+
 
 /*========== Tim's Overrides =============*/
 
@@ -634,6 +626,12 @@ to {
 	text-shadow:none;
 	padding: 50px 0;
 
+}
+.rotation-container {
+	display: block;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
 }
 .rotate.clockwise .container {
 	padding: 150px 0 200px;	
@@ -704,6 +702,31 @@ to {
 }
 .caption p {
 	font-size: 14px;
+}
+#entry {
+	color:#fff;
+	background:url(../images/bg-red.jpg) 0 0 repeat;
+	margin-top: -250px;
+}
+#footer {
+	background: #333;
+	color:#999;
+}
+#footer p {
+	margin-bottom: 20px;
+}
+#footer a {
+	color: #ccc;
+}
+#footer p, #footer a {
+	font-size: 12px;
+}
+.footer-end {
+	width: 100%;
+	height: 200px;
+	position: absolute;
+	bottom: 0;
+	background: #333;
 }
 
 /*==========9. CUSTOM MEDIA QUERIES==============*/
