@@ -12,7 +12,7 @@
 
 <!-- Startup CSS -->
 <link href="css/startup.css" rel="stylesheet">
-<link href="css/colorbox.css" rel="stylesheet">
+<script src="js/modernizr.js"></script> 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
   <script src="js/html5shiv.js"></script>
@@ -35,19 +35,48 @@
 </script>
 </head>
 <body>
+  <nav id="cd-vertical-nav">
+    <ul>
+      <li>
+        <a href="#top" data-number="1">
+          <span class="cd-dot"></span>
+          <span class="cd-label">Top</span>
+        </a>
+      </li>
+      <li>
+        <a href="#video" data-number="2">
+          <span class="cd-dot"></span>
+          <span class="cd-label">The Son of A Pitch Awards</span>
+        </a>
+      </li>
+      <li>
+        <a href="#categories" data-number="3">
+          <span class="cd-dot"></span>
+          <span class="cd-label">Categories</span>
+        </a>
+      </li>
+      <li>
+        <a href="#entry" data-number="4">
+          <span class="cd-dot"></span>
+          <span class="cd-label">Enter</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <a class="cd-nav-trigger cd-img-replace"><span></span></a>
 <div class="rotation-container">
 <!-- Parallax Header Starts -->
-<main id="top" class="masthead" >
-  <div class="main-content">
+<main id="top" class="masthead cd-section" >
+
     <div class="container"> 
       <div class="row">
-        <div class="col-md-2 col-md-offset-10">
+        <div class="col-xs-4 col-md-2 col-md-offset-10">
           <a href="#"><img src="images/logo.png" alt="Son of a Pitch" /></a>
         </div>
       </div>
       <div class="row">
         <div class="col-md-8">
-          <h1>We Know Why you got into advertising.</h1>
+          <h1>We know why you got into advertising.</h1>
           <p>The big shoots. The enormous budgets. The all-expense-paid, business-class-travel, five-star shoots. Not to mention the shiny awards, and open-bar after parties.</p>
           <p>Then, of course, there’s pitching.  Sleepless. Endless. Glory-less. Not a lobster-tail hors d'oeuvre in sight.</p>
           <p>In a word- Thankless. We feel your pain. And we want to reward it. With US$5000.</p>
@@ -56,28 +85,27 @@
       </div>
       <div class="row arrow-container">
         <!--  Scroll to Explore --> 
-        <a href="#explore" class="scrollto">
+        <a href="#video" class="scrollto">
           SCROLL<br />DOWN
           <p class="scrollto--arrow"><img src="images/scroll_down.png" alt="scroll down arrow"></p>
         </a> 
         <!-- // Scroll to Explore Ends -->       
       </div>
     </div>
-  </div>
 </main>
 <!-- // Parallax Header Ends --> 
-<div class="rotate clockwise" id="video">
+<div class="rotate clockwise cd-section" id="video">
   <div class="container rotate counter-clockwise">
     <div class="col-md-6"><img src="images/placeholder-vid.jpg" /></div>
     <div class="col-md-6">
       <h4>INTRODUCING</h4>
       <h3>The Son of A Pitch Awards</h3>
       <p>It’s a global initiative to reward everyone at HAVAS who cries, sweats, and bleeds for pitches. So even if your pitch didn’t win the business, it can still win you US$5000 for your team!</p>
-      <button class="btn btn-default">GET STARTED</button>
+      <a href="#entry" class="get-started"><button class="btn btn-default">GET STARTED</button></a>
     </div>
   </div>
 </div>
-<div class="rotate counter-clockwise" id="categories">
+<div class="rotate counter-clockwise cd-section" id="categories">
   <div class="container rotate clockwise"> 
     <div class="row">
       <h3>Six Categories to enter.<br />
@@ -155,7 +183,7 @@
 </div>
 
 <!-- Grey Highlight Section -->
-<div class="entry rotate clockwise" id="entry">
+<div class="entry rotate clockwise cd-section" id="entry">
   <div class="container rotate counter-clockwise"> 
     <div class="row">
       <div class="col-md-8">
@@ -204,30 +232,7 @@
 <script src="js/jquery.js"></script> 
 <script src="js/bootstrap.js"></script> 
 <script src="js/easing.js"></script> 
-<script src="js/jquery.colorbox-min.js"></script> 
-<!-- <script src="js/script.js"></script>  -->
-
-
-
-<!-- Scroll to Explore --> 
-
-<script>
-
-
- $(function() {
-    $('.scrollto, .gototop').bind('click',function(event){
-		 var $anchor = $(this);
-		 $('html, body').stop().animate({
-         scrollTop: $($anchor.attr('href')).offset().top
-          }, 1500,'easeInOutExpo');
-     event.preventDefault();
-      });
-    $("#watch-vid").colorbox({iframe:true, innerWidth:640, innerHeight:390});
-
-  });
-  
-
-</script>
+<script src="js/vertical-fixed-nav.js"></script>
     
 
 </body>

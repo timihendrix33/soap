@@ -48,114 +48,9 @@ Author URI: http://themeforest.net/user/surjithctly
 9. CUSTOM MEDIA QUERIES
 
 
-If you having trouble in editing css. please send a mail to support@surjithctly.in - 
-I will really help you
-
-*/
-
-
-/*========== Rotating things ===========*/
-
-/*#explore, #nine-steps, #entry {
-    margin: 0 -50px;
-    transform-origin: left center;
-    transform: rotate(5deg);	
-}*/
-
-/*#top.masthead .main-content {
-	position: relative;
-	z-index: 100;
-	background: url(../images/bg-red.png) 0 0 repeat;
-	padding:80px 0;
-}
-.logo {padding: 0 !important;}
-.section-title.light h2 {color:#fff;}
-#top #watch-vid {
-	color:#fff;
-	cursor: pointer;
-}
-#top #watch-vid:hover {text-decoration: none;}
-#top #watch-vid .glyphicon {
-	top:7px;
-}
-#yt-mobile {
-	display: none;
-}
-#top .buttons {
-	width: 717px;
-	margin: 40px auto;
-}
-#top .buttons .scrollto {
-	display: inline-block;
-	width: auto;
-	margin:0 !important;
-}
-#top button.btn-success {
-	width: 220px;
-	font-size: 16px;	
-	background-color: #f41b3a;
-	-webkit-box-shadow: 0 3px 0 rgba(153, 25, 43, 1);
-	box-shadow: 0 3px 0 rgba(153, 25, 43, 1);
-}
-#top button.btn-success:hover, #top button.btn-success:focus, #top button.btn-success:active {
-	background-color: #f41b3a;
-	-webkit-box-shadow: 0 3px 0 rgba(153, 25, 43, 1);
-	box-shadow: 0 3px 0 rgba(153, 25, 43, 1);		
-}
-button .scrollto, button .scrollto:hover {
-	margin:0 !important;
-	width: auto;
-}
-
-.btn-danger {
-	-webkit-box-shadow: 0 3px 0 rgba(172, 41, 37, 1);
-	-moz-box-shadow: 0 3px 0 rgba(172, 41, 37, 1);
-	box-shadow: 0 3px 0 rgba(172, 41, 37, 1);
-}
-.btn-warning {
-	-webkit-box-shadow: 0 3px 0 rgba(213, 133, 18, 1);
-	-moz-box-shadow: 0 3px 0 rgba(213, 133, 18, 1);
-	box-shadow: 0 3px 0 rgba(213, 133, 18, 1);	
-}*/
-/*.scrollto, .scrollto:hover {margin:50px auto !important;}*/
-
-.nine-steps {
-	padding: 60px 15px;
-	color: #FFF;
-	text-align: center;
-	text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
-	background-color: #DA3A37;
-	background-image:url(../images/video_bg_numbers.jpg);
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-attachment: fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;	
-}
-.nine-steps .video-wrapper {
-	position: relative;
-	padding-bottom: 43.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-	width:80%;
-	margin:0 auto;
-}
-.nine-steps .video-wrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
 .entry iframe, section.row.breath {width: 100%; border:none; max-width: 750px;margin: 30px auto; display: block;}
 .highlight.entry {margin-top: 0;}
 
-.footerlinks h4 {padding:0; text-align: center;}
-.footerlinks p {text-align: left;}
-.footerlinks a:first-child {font-size: 18px;}
 
 
 /*========== 1. GLOBAL STYLES ==============*/
@@ -211,12 +106,9 @@ h6 {
 p {
 	margin-bottom: 30px;
 }
-/*a {
-	color:#5173bd;
-}
-a:hover, a:focus {
-	color:#5173bd;
-}*/
+img {max-width: 100%;}
+ul {list-style: none; -webkit-padding-start:0;}
+
 .btn, .btn-lg, .input-lg {
 	border-radius:3px;
 }
@@ -654,19 +546,31 @@ to {
 }
 .rotate {
 	margin:0 -100px;
-	transform-origin:left center;	
+	-webkit-transform-origin: left center;
+	-moz-transform-origin: left center;
+	-o-transform-origin: left center;
+	-ms-transform-origin: left center;
+	transform-origin: left center;
 }
 .rotate.container {
 	margin-left:auto;
 	margin-right:auto;
 }
 .rotate.clockwise {
+	-webkit-transform: rotate(5deg);
+	-moz-transform: rotate(5deg);
+	-o-transform: rotate(5deg);
+	-ms-transform: rotate(5deg);
 	transform: rotate(5deg);
 }
 .rotate.counter-clockwise {
+	-webkit-transform: rotate(-5deg);
+	-moz-transform: rotate(-5deg);
+	-o-transform: rotate(-5deg);
+	-ms-transform: rotate(-5deg);
 	transform: rotate(-5deg);
 }
-.btn-default {
+.btn-default, .btn-default:focus {
 	color:#fff;
 	background: #d0112b;
 	border: none;
@@ -735,69 +639,263 @@ to {
 /*MEDIA QUERIES*/
 
 @media (max-width: 991px) {
- h1 {
-font-size: 35px;
-line-height: 50px;
-margin: 15px 0;
-}
- h2 {
-font-size: 35px;
-}
- .testimonials [class*="col-"]:not(:first-child) {
- margin-top: 40px;
-}
- .planpricing [class*="col-"]:not(:first-child) {
- margin-top: 30px;
-}
- .breath {
-margin: 30px auto;
-}
-}
-@media screen and (max-device-width: 800px) {
-	#top.masthead {
-		background: url(../images/will-to-win.jpg) no-repeat center center fixed;
-		background-size: cover;
+	.rotate {
+		margin:0 -200px;
 	}
-	#bgvid { display: none; }
+	#video div, #footer div {
+		margin-bottom: 40px;
+	}
 }
- @media (max-width: 767px) {
-	 h1 {
-	font-size: 30px;
-	line-height: 40px;
+
+@media (max-width: 767px) {
+	body {
+		font-size: 15px;
 	}
-	 h2 {
-	font-size: 30px;
-	line-height: 40px;
+	h1 {
+		font-size: 30px;
+
 	}
-	 .subscribe [class*="col-"]:not(:first-child) {
-	 margin-top: 30px;
+	h2 {
+		font-size: 26px;
 	}
-	 .masthead {
-	padding: 40px 15px;
+	h3 {
+		font-size: 24px;
+		margin-bottom: 20px;
 	}
-	#top .buttons {
-		width: 230px;
+	h4 {
+		font-size: 15px;
+		margin-bottom: 5px;
 	}
-	#top button.btn-success	{
-		margin-top:10px;
+	p {
+		margin-bottom: 10px;
 	}
 
+
+	.container {
+		width: 300px;
+	}
 }
- @media (max-width: 480px) {
-	 /*Media Queries for smaller devices*/
-	 #top.masthead .main-content {
-	 	padding: 20px 0;
-	 }
-	 .logo {width: 150px;}
-	 h5 {
-	 	font-size: 20px;
-	 }
-	 #yt-mobile {
-	 	display: block;
-		width: 80%;
-		margin: 0 auto;	 	
-	 }
-	 #watch-vid {
-	 	display: none;
-	 }
+
+
+/*=========== Vertical Fixed Nav ==============*/
+
+/* No Touch devices */
+.cd-nav-trigger {
+  display: none;
+}
+
+.no-touch #cd-vertical-nav {
+  position: fixed;
+  right: 40px;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.no-touch #cd-vertical-nav li {
+  text-align: right;
+}
+.no-touch #cd-vertical-nav a {
+  display: inline-block;
+  /* prevent weird movements on hover when you use a CSS3 transformation - webkit browsers */
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.no-touch #cd-vertical-nav a:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.no-touch #cd-vertical-nav a span {
+  float: right;
+  display: inline-block;
+/*  -webkit-transform: scale(0.6);
+  -moz-transform: scale(0.6);
+  -ms-transform: scale(0.6);
+  -o-transform: scale(0.6);
+  transform: scale(0.6);*/
+}
+/*.no-touch #cd-vertical-nav a:hover span {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}*/
+.no-touch #cd-vertical-nav a:hover .cd-label {
+  opacity: 1;
+}
+.no-touch #cd-vertical-nav a.is-selected .cd-dot {
+  background-color: #ed1c24;
+}
+.no-touch #cd-vertical-nav .cd-dot {
+  position: relative;
+  /* we set a top value in order to align the dot with the label. If you change label's font, you may need to change this top value*/
+  top: 4px;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid #ed1c24;
+  -webkit-transition: -webkit-transform 0.2s, background-color 0.5s;
+  -moz-transition: -moz-transform 0.2s, background-color 0.5s;
+  transition: transform 0.2s, background-color 0.5s;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.no-touch #cd-vertical-nav .cd-label {
+  position: relative;
+  margin-right: 10px;
+  padding: .4em .5em;
+  color: #ccc;
+  font-size: 14px;
+  font-size: 0.875rem;
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+  transition: transform 0.2s, opacity 0.2s;
+  opacity: 0;
+  -webkit-transform-origin: 100% 50%;
+  -moz-transform-origin: 100% 50%;
+  -ms-transform-origin: 100% 50%;
+  -o-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+}
+
+/* Touch devices */
+.touch .cd-nav-trigger {
+  display: block;
+  z-index: 2;
+  position: fixed;
+  bottom: 30px;
+  right: 5%;
+  height: 44px;
+  width: 44px;
+  border-radius: 0.25em;
+  border:1px solid #ccc;
+  background: rgba(255, 255, 255, 0.9);
+}
+.touch .cd-nav-trigger span {
+  position: absolute;
+  height: 4px;
+  width: 4px;
+  background-color: #3e3947;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+.touch .cd-nav-trigger span::before, .touch .cd-nav-trigger span::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background-color: inherit;
+  border-radius: inherit;
+}
+.touch .cd-nav-trigger span::before {
+  top: -9px;
+}
+.touch .cd-nav-trigger span::after {
+  bottom: -9px;
+}
+
+.touch #cd-vertical-nav {
+  position: fixed;
+  z-index: 1;
+  right: 5%;
+  bottom: 30px;
+  width: 90%;
+  max-width: 400px;
+  max-height: 90%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform-origin: right bottom;
+  -moz-transform-origin: right bottom;
+  -ms-transform-origin: right bottom;
+  -o-transform-origin: right bottom;
+  transform-origin: right bottom;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  border-radius: 0.25em;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.touch #cd-vertical-nav a {
+  color:#ccc;
+  display: block;
+  padding: 1em;
+  border-bottom: 1px solid rgba(62, 57, 71, 0.1);
+}
+.touch #cd-vertical-nav a span:first-child {
+  display: none;
+}
+.touch #cd-vertical-nav a.is-selected span:last-child {
+  color: #d88683;
+}
+.touch #cd-vertical-nav.open {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.touch #cd-vertical-nav.open + .cd-nav-trigger {
+  background-color: transparent;
+}
+.touch #cd-vertical-nav.open + .cd-nav-trigger span {
+  background-color: rgba(62, 57, 71, 0);
+}
+.touch #cd-vertical-nav.open + .cd-nav-trigger span::before, .touch #cd-vertical-nav.open + .cd-nav-trigger span::after {
+  background-color: #3e3947;
+  height: 3px;
+  width: 20px;
+  border-radius: 0;
+  left: -8px;
+}
+.touch #cd-vertical-nav.open + .cd-nav-trigger span::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 1px;
+}
+.touch #cd-vertical-nav.open + .cd-nav-trigger span::after {
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+  bottom: 0;
+}
+.touch #cd-vertical-nav li:last-child a {
+  border-bottom: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .touch .cd-nav-trigger, .touch #cd-vertical-nav {
+    bottom: 40px;
+  }
 }
