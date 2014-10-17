@@ -193,9 +193,20 @@
 
     </div>
     <section>
-      <div id="wufoo-qlf48up0rqfdke">
+    <?php 
+
+      $curl = new WufooCurl();
+      $response = $curl->getAuthenticated('http://havasworldwide.wufoo.com/api/v3/form/son-of-a-pitch-awards.json?pretty=true', self::9AQ3-WY7H-6H09-T1SS);
+      // $response = json_decode($response);
+      // $hash = $response->Forms[0]->Hash;
+      // echo $this->getFormSnippet($hash, self::SUBDOMAIN);
+
+      ?>
+
+
+<!--       <div id="wufoo-qlf48up0rqfdke">
       Fill out my <a href="http://havasworldwide.wufoo.com/forms/qlf48up0rqfdke">online form</a>.
-      </div>
+      </div> -->
       <script type="text/javascript">var qlf48up0rqfdke;(function(d, t) {
       var s = d.createElement(t), options = {
       'userName':'havasworldwide',
