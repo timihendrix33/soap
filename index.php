@@ -193,25 +193,40 @@
 
     </div>
     <section>
-      <div id="wufoo-qlf48up0rqfdke">
+    <?php 
+
+
+      
+      $curl = new WufooCurl();
+      $response = $curl->getAuthenticated('http://havasworldwide.wufoo.com/api/v3/forms/son-of-a-pitch-awards.json', self::'9AQ3-WY7H-6H09-T1SS');
+      $response = json_decode($response);
+      $hash = $response->Forms[0]->Hash;
+      echo $this->getFormSnippet($hash, self::'havasworldwide');
+
+      ?>
+
+
+<!--       <div id="wufoo-qlf48up0rqfdke">
       Fill out my <a href="http://havasworldwide.wufoo.com/forms/qlf48up0rqfdke">online form</a>.
-      </div>
-      <script type="text/javascript">var qlf48up0rqfdke;(function(d, t) {
-      var s = d.createElement(t), options = {
-      'userName':'havasworldwide',
-      'formHash':'qlf48up0rqfdke',
-      'autoResize':true,
-      'height':'2000',
-      'async':true,
-      'host':'wufoo.com',
-      'header':'hide',
-      'ssl':false};
-      s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
-      s.onload = s.onreadystatechange = function() {
-      var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
-      try { qlf48up0rqfdke = new WufooForm();qlf48up0rqfdke.initialize(options);qlf48up0rqfdke.display(); } catch (e) {}};
-      var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
-      })(document, 'script');</script>
+      </div> -->
+      <script type="text/javascript">
+      // var qlf48up0rqfdke;(function(d, t) {
+      // var s = d.createElement(t), options = {
+      // 'userName':'havasworldwide',
+      // 'formHash':'qlf48up0rqfdke',
+      // 'autoResize':true,
+      // 'height':'1324',
+      // 'async':true,
+      // 'host':'wufoo.com',
+      // 'header':'hide',
+      // 'ssl':false};
+      // s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'www.wufoo.com/scripts/embed/form.js';
+      // s.onload = s.onreadystatechange = function() {
+      // var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+      // try { qlf48up0rqfdke = new WufooForm();qlf48up0rqfdke.initialize(options);qlf48up0rqfdke.display(); } catch (e) {}};
+      // var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr);
+      // })(document, 'script');
+      </script>
 
     </section>
     <section class="row breath">

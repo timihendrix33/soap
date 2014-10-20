@@ -545,7 +545,7 @@ to {
 	margin-top:15px;
 }
 .rotate {
-	margin:0 -100px;
+	margin:0 -120px;
 	-webkit-transform-origin: left center;
 	-moz-transform-origin: left center;
 	-o-transform-origin: left center;
@@ -713,19 +713,7 @@ to {
 .no-touch #cd-vertical-nav a span {
   float: right;
   display: inline-block;
-/*  -webkit-transform: scale(0.6);
-  -moz-transform: scale(0.6);
-  -ms-transform: scale(0.6);
-  -o-transform: scale(0.6);
-  transform: scale(0.6);*/
 }
-/*.no-touch #cd-vertical-nav a:hover span {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
-}*/
 .no-touch #cd-vertical-nav a:hover .cd-label {
   opacity: 1;
 }
