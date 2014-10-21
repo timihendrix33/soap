@@ -136,7 +136,7 @@ ul {list-style: none; -webkit-padding-start:0;}
 
 .masthead {
 	position: relative;
-	padding: 80px 15px;
+/*	padding: 80px 15px;
 	text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
 	background-color: #6883cc;
 	background-image:url(../images/header_bg_color_red.jpg);
@@ -146,7 +146,7 @@ ul {list-style: none; -webkit-padding-start:0;}
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: cover;
+	background-size: cover;*/
 }
 /* Initial Subtle Animation*/
 
@@ -314,7 +314,7 @@ to {
 	transform: translateY(-20px);
 }
 }
-.scrollto, .scrollto:hover {
+.scrollto, .scrollto:hover, scrollto:focus {
 	margin:30px;
 	display:block;
 	color:#FFF;

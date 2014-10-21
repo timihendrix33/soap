@@ -43,17 +43,18 @@ input, textarea {
 	border: none;	
 	background: #fff !important;
 }
+.leftLabel li div, .rightLabel li div {
+	width: 80%;
+}
 form li, form li.section div, .wufoo .section h3 {
-	padding-left:0;
+	padding-left:2px;
 }
 form li.section {
-	margin: 50px 0 20px;
-	width: 47% !important;
-	padding: 7px 1% 0 0;
+	margin: 0 0 20px;
+	padding: 50px 1% 0 0;
 }
 form li.section section {
 	border-top: 2px solid #fff;
-	width: 65%;
 	padding-right:24px;
 }
 .wufoo .section h3, .wufoo .section h3 span {
@@ -80,7 +81,7 @@ form span.req {
 }
 .wufoo select.select {
 	background-color: #fff;
-	height:33px;
+	height:37px;
 	width: 53%;
 }
 .safari select.select {
@@ -107,27 +108,48 @@ form li.buttons div {
 	margin-top:50px !important;
 }
 form li.buttons:before {
-	content: "Submit for fame and fortune!";
+	content: "Submit for fame and fortune!**";
 	left: 50%;
 	color: #fff;
-	margin: -10px 0 0 -90px;
+	margin: -10px 0 0 -116px;
 	font-size: 16px;
 	position: absolute;
 	top: 67%;
-	pointer-events: none
+	text-transform: uppercase;
+	pointer-events: none;
 }
+form li.buttons:after {
+	content: "**Fame is limited to the Havas network";
+	font-size: 10px;
+	font-weight: 300;
+	color: #fff;
+	text-transform: uppercase;
+	position: absolute;
+	bottom:-10px;
+	left:50%;
+	margin-left:-80px;
+	height: auto;
+	visibility: visible;
+}
+
 
 
 /*======= Focused ==========*/
 form li.focused {
 	background: none !important;
 }
-.wufoo li.focused label.desc {
+.wufoo li.focused label.desc, 
+.wufoo li.focused legend.desc, 
+.wufoo li.focused div, 
+.wufoo li.focused span, 
+.wufoo li.focused div label, 
+.wufoo li.focused span label, 
+.safari .wufoo li.focused input.file {
 	color: #fff;
 }
 input:focus {
 	border-color: #66afe9;
-	outline: 0;
+	/*outline: 0;*/
 	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);	
 }
@@ -141,8 +163,12 @@ form li.error {
 form li.error label {
 	color: #fff !important;
 }
-form li.error input {
-	background: #ff9999 !important;
+form li.error input, form li.error select,
+form li.error textarea {
+	/*background: #ff9999 !important;*/
+border-color: #843534;
+-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #fff;
+box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 6px #fff;
 }
 #errorLi {
 	border-left-color: #ff9999 !important;
@@ -154,9 +180,54 @@ form li.error input {
 	text-align: left;	
 }
 
-
-
-
+.confirm h2 {
+	color: #fff;
+	text-align: left;
+	margin: 0;	
+}
+.confirm h2 a {
+	color:#ccc;
+}
+@media (max-width: 1200px) {
+	input.btTxt {
+		width: 380px;
+	}
+}
+@media (max-width: 991px) {
+	input.btTxt {
+		width: 330px;
+	}
+	.noI .leftLabel .buttons div {
+		margin-left: 0;
+	}
+}
+@media (max-width: 767px) {
+	form li.leftHalf, form li.rightHalf {
+		width: 100% !important;
+		float: none !important;
+	}
+	.leftLabel .desc, .rightLabel .desc {
+		width: 95%;
+	}
+	form li.buttons {
+		padding-left: 0 !important;
+	}	
+	form li.buttons div {
+		width: 100%;
+		margin-top:0 !important;
+	}
+	input.btTxt {
+		width: 100%;
+	}
+	form li.buttons:before {
+		font-size: 14px;
+		margin:-10px 0 0 -122px;
+		top:50%;
+	}
+	form li.buttons:after {
+		margin-left: -110px;
+	}
+}
 
 
 
