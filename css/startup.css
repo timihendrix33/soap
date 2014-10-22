@@ -51,7 +51,13 @@ Author URI: http://themeforest.net/user/surjithctly
 .entry iframe, section.row.breath {width: 100%; border:none; max-width: 750px;margin: 30px auto; display: block;}
 .highlight.entry {margin-top: 0;}
 
-
+/*======== Safari can't render wufoo form with the rotation =========*/
+.safari #entry {
+	-webkit-transform: rotate(0);
+}
+.safari #entry .container {
+	-webkit-transform: rotate(0);	
+}
 
 /*========== 1. GLOBAL STYLES ==============*/
 
