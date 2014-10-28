@@ -1,6 +1,3 @@
-@charset "utf-8";
-/* CSS Document */
-
 @import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=180765a3-4b84-4b94-ad02-2d3d804dd4f5");
 @font-face{
 font-family:"Proxima Nova W01_R3";
@@ -23,6 +20,28 @@ src:url("../fonts/fbc6b03a-b3a1-427c-a884-053deca3a53c.eot?#iefix");
 src:url("../fonts/fbc6b03a-b3a1-427c-a884-053deca3a53c.eot?#iefix") format("eot"),url("../fonts/d999c07b-a049-4eb5-b8a6-4f36ae25e67e.woff") format("woff"),url("../fonts/4d4a75f5-d32a-4a09-8665-133afd39cc37.ttf") format("truetype"),url("../fonts/8152bc4e-d700-4c78-b6be-326893e6f53f.svg#8152bc4e-d700-4c78-b6be-326893e6f53f") format("svg");
 font-weight: 500;
 font-style: Bold;
+}
+@font-face{
+font-family:"Trade Gothic W01_R8";
+src:url("../fonts/bb3aa0a7-2585-4e89-ad82-658fd561751a.eot?#iefix") format("eot")
+}
+@font-face{
+font-family:"Trade Gothic W01";
+src:url("../fonts/bb3aa0a7-2585-4e89-ad82-658fd561751a.eot?#iefix");
+src:url("../fonts/bb3aa0a7-2585-4e89-ad82-658fd561751a.eot?#iefix") format("eot"),url("../fonts/1454a71d-cdbb-429c-8092-122f4493e0c7.woff") format("woff"),url("../fonts/d5ea405c-2180-4ff0-bd51-3e19fb280be4.ttf") format("truetype"),url("../fonts/70ac6679-cf48-4a0e-a909-d1e3bb4a1aa9.svg#70ac6679-cf48-4a0e-a909-d1e3bb4a1aa9") format("svg");
+font-weight: 800;
+font-style: Regular;
+}
+@font-face{
+font-family:"Trade Gothic W01_R7";
+src:url("../fonts/257c802f-349c-4b4d-aefa-546d5de15ec6.eot?#iefix") format("eot")
+}
+@font-face{
+font-family:"Trade Gothic W01";
+src:url("../fonts/257c802f-349c-4b4d-aefa-546d5de15ec6.eot?#iefix");
+src:url("../fonts/257c802f-349c-4b4d-aefa-546d5de15ec6.eot?#iefix") format("eot"),url("../fonts/5fdc935e-9e30-442a-bbe9-8d887b858471.woff") format("woff"),url("../fonts/616c4c87-a077-43f4-a9f4-f01267c13818.ttf") format("truetype"),url("../fonts/c901ad5f-a842-4549-a1f4-583a97f7e169.svg#c901ad5f-a842-4549-a1f4-583a97f7e169") format("svg");
+font-weight: 700;
+font-style: Regular;
 }
 
 /*
@@ -85,24 +104,33 @@ a:hover {
 	text-decoration: none;
 }
 h1 {
-	font-weight: bold;
-	font-size:72px;
+	font-family: 'Trade Gothic W01', Arial, sans-serif;
+	font-weight: 700;
+	font-size:110px;
 	color: #d0112b;
 	line-height: 1;
 	margin-bottom:40px;
+	margin-top:90px;
+	text-transform: uppercase;
 }
 h2 {
+	font-family: 'Trade Gothic W01', Arial, sans-serif;
+	font-weight: 700;
 	font-weight: bold;
-	font-size:60px;
+	font-size:72px;
 	font-weight:600;
 	margin:15px 0;
 }
 h3 {
-	font-size:48px;
+	font-family: 'Trade Gothic W01', Arial, sans-serif;
+	font-weight: 700;
+	font-size:60px;
 	margin:0 0 35px;
 }
 h4 {
-	font-size:18px;
+	font-family: 'Trade Gothic W01', Arial, sans-serif;
+	font-weight: 800;	
+	font-size:20px;
 	font-weight: bold;
 	margin:10px 0;
 	text-transform: uppercase;
@@ -549,6 +577,7 @@ to {
 	position:absolute;
 	left:0;
 	right:0;
+	margin-top: 30px;
 }
 .scrollto, .scrollto:hover {
 	color: #d0112b;
@@ -659,6 +688,9 @@ to {
 	#video div, #footer div {
 		margin-bottom: 40px;
 	}
+	h1 {
+		font-size: 90px;	
+	}
 }
 
 @media (max-width: 767px) {
@@ -667,7 +699,7 @@ to {
 	}
 	h1 {
 		font-size: 30px;
-
+		margin-top: 20px;
 	}
 	h2 {
 		font-size: 26px;
