@@ -579,6 +579,29 @@ to {
 	right:0;
 	margin-top: 30px;
 }
+.money {
+	color: #d0112b;
+	-webkit-animation: scaleDown 2s, textShadow 2s;
+	-moz-animation: blurFadeInOut 2s ease-in backwards;
+	-ms-animation: blurFadeInOut 2s ease-in backwards;
+	animation: blurFadeInOut 2s ease-in backwards;
+}
+@-webkit-keyframes scaleDown{
+	from {
+		transform: scale(2);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+@-webkit-keyframes textShadow{
+	from {
+		text-shadow: 0px 0px 20px #d0112b;
+	}
+	to {
+		text-shadow: none;
+	}
+}
 .scrollto, .scrollto:hover {
 	color: #d0112b;
 	font-size: 10px;
