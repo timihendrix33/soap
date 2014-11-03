@@ -66,6 +66,22 @@ form li.section section {
 .wufoo .section h3 span {
 	margin-right: 15px;
 }
+.wufoo .section.download {
+	margin:0;
+	padding:0;
+}
+.wufoo .section.download section {
+	border:none;
+	margin-bottom:10px;
+}
+.wufoo .section.download h3 a {
+	color: #fff;
+	text-decoration: underline;
+	font-size: 14px;
+}
+.wufoo .section.download h3 a:hover {
+	text-decoration: none;
+}
 .leftLabel .desc, .rightLabel .desc {
 	float: none;
 	width: 71%;
@@ -119,7 +135,7 @@ form li.buttons:before {
 	pointer-events: none;
 }
 form li.buttons:after {
-	content: "**Fame is limited to the Havas network";
+	content: "**Fame is limited to the Havas Creative Group";
 	font-size: 10px;
 	font-weight: 300;
 	color: #fff;
@@ -127,7 +143,7 @@ form li.buttons:after {
 	position: absolute;
 	bottom:-10px;
 	left:50%;
-	margin-left:-120px;
+	margin-left:-140px;
 	height: auto;
 	visibility: visible;
 }
